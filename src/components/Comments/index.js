@@ -21,6 +21,7 @@ class Comments extends Component {
     nameInput: '',
     commentInput: '',
     commentList: [],
+    isLiked: false,
   }
 
   deleteComment = commentId => {
@@ -56,7 +57,7 @@ class Comments extends Component {
 
   onAddComment = event => {
     event.preventDefault()
-    const {nameInput, commentInput} = this.state
+    const {nameInput, commentInput, isLiked} = this.state
     const initialBackgroundColorClassName = `initial-container ${
       initialContainerBackgroundClassNames[
         Math.ceil(
@@ -69,7 +70,7 @@ class Comments extends Component {
       name: nameInput,
       comment: commentInput,
       date: new Date(),
-      isLiked: false,
+      isLiked,
       initialClassName: initialBackgroundColorClassName,
     }
 
