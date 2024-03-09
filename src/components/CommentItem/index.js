@@ -4,7 +4,7 @@ import {formatDistanceToNow} from 'date-fns'
 
 const CommentItem = props => {
   const {commentsDetails} = props
-  const {id, name, comments, isLiked, initialClassName, date} = commentsDetails
+  const {id, name, comment, isLiked, initialClassName, date} = commentsDetails
   const initial = name ? name[0].toUpperCase() : ''
   const likeTextClassName = isLiked ? 'button active' : 'button-1'
   const likeImgUrl = isLiked
@@ -33,7 +33,7 @@ const CommentItem = props => {
             <p className="username">{name}</p>
             <p className="time">{postedTime} ago</p>
           </div>
-          <p className="comment">{comments}</p>
+          <p className="comment">{comment}</p>
         </div>
       </div>
       <div className="buttons-container">
