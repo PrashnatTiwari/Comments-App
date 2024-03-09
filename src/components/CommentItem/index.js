@@ -6,7 +6,7 @@ const CommentItem = props => {
   const {commentsDetails} = props
   const {id, name, comment, isLiked, initialClassName, date} = commentsDetails
   const initial = name ? name[0].toUpperCase() : ''
-  const likeTextClassName = isLiked ? 'button active' : 'button-1'
+  const likeTextClassName = isLiked ? 'button-1 active' : 'button-1'
   const likeImgUrl = isLiked
     ? 'https://assets.ccbp.in/frontend/react-js/comments-app/liked-img.png'
     : 'https://assets.ccbp.in/frontend/react-js/comments-app/like-img.png'
