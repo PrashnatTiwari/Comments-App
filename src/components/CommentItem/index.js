@@ -5,8 +5,8 @@ import {formatDistanceToNow} from 'date-fns'
 const CommentItem = props => {
   const {commentsDetails} = props
   const {id, name, comments, isLiked, initialClassName, date} = commentsDetails
-  const initial = name ? name[0].toUppercase() : ''
-  const likeTextClassName = isLiked ? 'button active' : 'button'
+  const initial = name ? name[0].toUpperCase() : ''
+  const likeTextClassName = isLiked ? 'button active' : 'button-1'
   const likeImgUrl = isLiked
     ? 'https://assets.ccbp.in/frontend/react-js/comments-app/liked-img.png'
     : 'https://assets.ccbp.in/frontend/react-js/comments-app/like-img.png'
@@ -48,7 +48,7 @@ const CommentItem = props => {
           </button>
         </div>
         <button
-          className="button"
+          className="button-1"
           type="button"
           onClick={onDeleteComment}
           data-testid="delete"
